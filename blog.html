@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Articles de John Doe sur le développement web et le numérique." />
+    <title>Blog | John Doe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body id="top" class="portfolio-page">
+    <div class="page-shell">
+      <!-- Navigation commune vers les six pages du portfolio. -->
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand" href="index.html">JOHN DOE</a>
+          <nav class="main-nav" aria-label="Navigation principale">
+            <a href="index.html">Accueil</a>
+            <a href="services.html">Services</a>
+            <a href="realisations.html">Réalisations</a>
+            <a href="blog.html" aria-current="page">Blog</a>
+            <a href="contact.html">Me contacter</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Bandeau graphique commun aux pages éditoriales. -->
+      <div class="portfolio-banner" aria-hidden="true"></div>
+
+      <!-- Titre du blog et grille des six articles. -->
+      <main class="portfolio-main blog-main">
+        <header class="portfolio-heading">
+          <h1>BLOG</h1>
+          <p>Retrouvez ici quelques articles sur le développement web.</p>
+          <span class="heading-rule" aria-hidden="true"></span>
+        </header>
+
+        <section class="blog-grid" aria-label="Articles du blog">
+          <!-- Article consacré aux bases du HTML et du CSS. -->
+          <article class="blog-card" id="coder-html-css">
+            <img class="project-image" src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=900&q=85" alt="Code HTML et CSS affiché sur un écran" />
+            <div class="blog-card-body">
+              <h2>Coder son site en HTML/CSS</h2>
+              <p>Les bases pour structurer une page web et lui donner son apparence.</p>
+              <details class="article-more">
+                <summary>Lire la suite</summary>
+                <p>HTML définit la structure du contenu, tandis que CSS gère sa présentation. Commencez par une structure sémantique simple, puis adaptez-la aux différentes tailles d'écran.</p>
+              </details>
+            </div>
+            <div class="project-tech">Publié le 22 août 2022</div>
+          </article>
+
+          <!-- Article sur la vente de produits en ligne. -->
+          <article class="blog-card" id="vendre-en-ligne">
+            <img class="project-image" src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=85" alt="Paiement par carte pour un achat en ligne" />
+            <div class="blog-card-body">
+              <h2>Vendre ses produits sur le web</h2>
+              <p>Les points essentiels pour présenter et vendre ses produits en ligne.</p>
+              <details class="article-more">
+                <summary>Lire la suite</summary>
+                <p>Une boutique claire présente des fiches produits détaillées, un parcours d'achat compréhensible et des informations de livraison visibles. La confiance et la simplicité facilitent la commande.</p>
+              </details>
+            </div>
+            <div class="project-tech">Publié le 20 août 2022</div>
+          </article>
+
+          <!-- Article sur la visibilité d'un site dans les moteurs de recherche. -->
+          <article class="blog-card" id="referencement">
+            <img class="project-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=85" alt="Ordinateur portable affichant des données web" />
+            <div class="blog-card-body">
+              <h2>Se positionner sur Google</h2>
+              <p>Quelques bonnes pratiques pour améliorer la visibilité d'un site.</p>
+              <details class="article-more">
+                <summary>Lire la suite</summary>
+                <p>Proposez un contenu utile, des titres explicites et des pages rapides. Une structure accessible et des liens pertinents aident les visiteurs comme les moteurs de recherche.</p>
+              </details>
+            </div>
+            <div class="project-tech">Publié le 1 août 2022</div>
+          </article>
+
+          <!-- Article sur l'adaptation des interfaces aux écrans mobiles. -->
+          <article class="blog-card" id="responsive-design">
+            <img class="project-image" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=85" alt="Ordinateur et appareils numériques sur un bureau" />
+            <div class="blog-card-body">
+              <h2>Coder en responsive design</h2>
+              <p>Concevoir une interface confortable sur mobile, tablette et ordinateur.</p>
+              <details class="article-more">
+                <summary>Lire la suite</summary>
+                <p>Utilisez des grilles souples, des unités adaptatives et des points de rupture justifiés par le contenu. Testez ensuite la navigation et la lisibilité sur plusieurs largeurs.</p>
+              </details>
+            </div>
+            <div class="project-tech">Publié le 31 juillet 2022</div>
+          </article>
+
+          <!-- Article sur les fondations du référencement naturel. -->
+          <article class="blog-card" id="seo">
+            <img class="project-image" src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=900&q=85" alt="Écran affichant des graphiques de référencement" />
+            <div class="blog-card-body">
+              <h2>Techniques de référencement</h2>
+              <p>Les principes de base du SEO pour faciliter la découverte de vos pages.</p>
+              <details class="article-more">
+                <summary>Lire la suite</summary>
+                <p>Travaillez la qualité éditoriale, les titres, les descriptions et les performances. Le référencement s'améliore durablement lorsque la page répond précisément aux besoins des visiteurs.</p>
+              </details>
+            </div>
+            <div class="project-tech">Publié le 30 juillet 2022</div>
+          </article>
+
+          <!-- Article d'introduction aux langages et outils de programmation. -->
+          <article class="blog-card" id="apprendre-a-coder">
+            <img class="project-image" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=85" alt="Éditeur de code ouvert sur un ordinateur portable" />
+            <div class="blog-card-body">
+              <h2>Apprendre à coder</h2>
+              <p>Une méthode progressive pour débuter et réaliser ses premiers projets.</p>
+              <details class="article-more">
+                <summary>Lire la suite</summary>
+                <p>Choisissez un objectif concret, avancez par petites étapes et pratiquez régulièrement. Lire les erreurs et documenter vos essais fait partie intégrante de l'apprentissage.</p>
+              </details>
+            </div>
+            <div class="project-tech">Publié le 12 juillet 2022</div>
+          </article>
+        </section>
+      </main>
+
+      <!-- Pied de page avec navigation croisée et coordonnées. -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-block brand-block">
+            <h5>John Doe</h5>
+            <p>40 Rue Laure Diebold</p>
+            <p>69009 Lyon, France</p>
+            <p>Téléphone : <a href="tel:+33620304050">06 20 30 40 50</a></p>
+            <div class="socials" aria-label="Réseaux sociaux">
+              <a href="https://github.com/" aria-label="GitHub">gh</a>
+              <a href="https://x.com/" aria-label="X">x</a>
+              <a href="https://linkedin.com/" aria-label="LinkedIn">in</a>
+            </div>
+          </div>
+          <div class="footer-block">
+            <h5>Liens utiles</h5>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="index.html#about">À propos</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Me contacter</a></li>
+              <li><a href="mentions-legales.html">Mentions légales</a></li>
+            </ul>
+          </div>
+          <div class="footer-block">
+            <h5>Mes dernières réalisations</h5>
+            <ul>
+              <li><a href="realisations.html#fresh-food">Fresh food</a></li>
+              <li><a href="realisations.html#restaurant-akira">Restaurant Akira</a></li>
+              <li><a href="realisations.html#espace-bien-etre">Espace bien-être</a></li>
+            </ul>
+          </div>
+          <div class="footer-block">
+            <h5>Mes derniers articles</h5>
+            <ul>
+              <li><a href="#coder-html-css">Coder son site en HTML/CSS</a></li>
+              <li><a href="#vendre-en-ligne">Vendre ses produits sur le web</a></li>
+              <li><a href="#referencement">Se positionner sur Google</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">© Designed by John Doe</div>
+      </footer>
+    </div>
+    <!-- Lien fixe permettant de revenir rapidement au début de la page. -->
+    <a class="back-to-top" href="#top" aria-label="Retour en haut">↑</a>
+  </body>
+</html>

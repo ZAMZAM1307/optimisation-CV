@@ -1,0 +1,1355 @@
+/* Définition des variables CSS pour les couleurs et les styles globaux */
+:root {
+  --header-bg: rgba(17, 21, 30, 0.94);
+  --footer-bg: #0d1424;
+  --panel-bg: #f4f4f4;
+  --card-bg: #f2f2f2;
+  --dark: #0f1321;
+  --text: #1a202a;
+  --muted: #58677a;
+  --line: rgba(32, 44, 61, 0.15);
+  --primary: #1c9ce0;
+  --primary-dark: #0e3f7d;
+  --pink: #ea3eb9;
+  --red: #ef4d64;
+  --gold: #f7c76c;
+  --green: #7bc47d;
+  --blue: #45a7ea;
+}
+
+/* Styles généraux */
+* {
+  box-sizing: border-box;
+}
+
+/* Réinitialise les styles par défaut des éléments courants */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Définit les styles généraux du corps de la page */
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  background: #e8e8e8;
+  color: var(--text);
+}
+
+/* Définit les styles pour les liens */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* Définit les styles pour les images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Styles pour la structure de la page */
+.page-shell {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+/* Étire le contenu principal pour remplir l'espace libre avant le pied de page. */
+main {
+  flex: 1 0 auto;
+}
+
+/* Garde l'en-tête et le pied de page à leur hauteur naturelle. */
+.site-header,
+.site-footer {
+  flex-shrink: 0;
+}
+
+/* Styles pour l'en-tête du site */
+.site-header {
+  position: relative;
+  z-index: 5;
+  background: var(--header-bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Styles pour l'intérieur de l'en-tête */
+.header-inner {
+  max-width: 1185px;
+  margin: 0 auto;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+
+/* Styles pour la marque du site */
+.brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #fff;
+}
+
+/* Styles pour la navigation principale */
+.main-nav {
+  display: flex;
+  gap: 1.85rem;
+  align-items: center;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Styles pour les liens de la navigation principale */
+.main-nav a {
+  transition: opacity 0.2s ease;
+}
+
+/* Styles pour les liens de la navigation principale au survol */
+.main-nav a:hover {
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+}
+
+/* Styles pour la section hero */
+.hero {
+  position: relative;
+  min-height: 550px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 14, 27, 0.72) 0%,
+      rgba(6, 13, 24, 0.28) 28%,
+      rgba(8, 17, 32, 0.55) 100%
+    ),
+    url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=80")
+      center/cover no-repeat;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Styles pour l'élément avant de la section hero */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 35% 25%,
+      rgba(7, 135, 255, 0.32),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 70% 28%,
+      rgba(216, 31, 142, 0.18),
+      transparent 28%
+    ),
+    linear-gradient(0deg, rgba(6, 18, 35, 0.18), rgba(6, 18, 35, 0.18));
+}
+
+/* Styles pour l'intérieur de la section hero */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1185px;
+  margin: 0 auto;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 12px 80px;
+}
+
+/* Styles pour le texte de la section hero */
+.hero-copy {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: #fff;
+  margin-top: 30px;
+}
+
+/* Styles pour le titre de la section hero */
+.hero-copy h1 {
+  margin: 0;
+  font-size: clamp(2.7rem, 4vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: -0.06em;
+  font-weight: 800;
+  text-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Styles pour le sous-titre de la section hero */
+.hero-copy h2 {
+  margin: 12px 0 30px;
+  font-size: clamp(1.6rem, 2vw, 2.9rem);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Styles pour le bouton d'appel à l'action */
+.cta {
+  display: inline-block;
+  padding: 18px 28px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #0d8ae7, #2d95ff);
+  box-shadow: 0 20px 35px rgba(31, 140, 255, 0.3);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+/* Styles pour le bouton d'appel à l'action au survol */
+.device {
+  position: absolute;
+  bottom: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(13, 19, 28, 0.78);
+  box-shadow: 0 40px 50px rgba(0, 0, 0, 0.44);
+  overflow: hidden;
+}
+
+/* Styles pour l'élément avant de l'appareil */
+.device::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.06) 0,
+      rgba(255, 255, 255, 0.06) 2px,
+      transparent 2px,
+      transparent 6px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.04) 0,
+      rgba(255, 255, 255, 0.04) 2px,
+      transparent 2px,
+      transparent 8px
+    );
+}
+
+/* Styles pour l'élément après de l'appareil */
+.device::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 7px;
+  background:
+    linear-gradient(180deg, rgba(63, 90, 154, 0.25), rgba(29, 46, 70, 0.4)),
+    linear-gradient(
+      120deg,
+      rgba(25, 250, 255, 0.1),
+      transparent 35%,
+      rgba(255, 142, 204, 0.18) 100%
+    );
+}
+
+/* Styles pour l'appareil de gauche */
+.device-left {
+  left: 50%;
+  width: 470px;
+  height: 240px;
+  transform: translateX(-25%);
+  opacity: 0.92;
+}
+
+/* Styles pour l'appareil de droite */
+.device-right {
+  right: 120px;
+  width: 250px;
+  height: 170px;
+  bottom: 34px;
+  opacity: 0.9;
+}
+
+.content {
+  max-width: 1185px;
+  margin: 0 auto;
+  padding: 34px 12px 0;
+}
+
+/* Styles pour la carte de présentation */
+.about-card {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(9, 12, 21, 0.05);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(15, 19, 28, 0.08);
+  padding: 26px 26px 14px;
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 28px;
+}
+
+/* Styles pour le texte de la carte de présentation */
+.about-copy {
+  color: #1d252f;
+}
+
+/* Styles pour le titre de la carte de présentation */
+.about-copy h3 {
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(31, 133, 210, 0.7);
+  font-size: clamp(2rem, 2.5vw, 2.8rem);
+  font-weight: 300;
+  letter-spacing: -0.06em;
+}
+
+/* Styles pour les paragraphes de la carte de présentation */
+.about-copy p {
+  margin: 0 0 18px;
+  font-size: 1.12rem;
+  line-height: 1.8;
+  color: rgba(29, 37, 47, 0.76);
+}
+
+/* Styles pour le panneau des compétences */
+.skills-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 2px;
+}
+
+/* Styles pour le portrait dans le panneau des compétences */
+.portrait {
+  width: 100%;
+  height: 210px;
+  border-radius: 14px;
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12)),
+    url("https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80")
+      center/cover no-repeat;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour le titre dans le panneau des compétences */
+.skills-panel h4 {
+  margin: 20px 0 18px;
+  font-size: clamp(2rem, 2.4vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  color: var(--text);
+}
+
+/* Styles pour la liste des compétences */
+.skills {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Styles pour chaque élément de compétence */
+.skill-item {
+  display: block;
+}
+
+/* Styles pour le label de chaque compétence */
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+  color: #2c3d50;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+
+/* Styles pour la barre de progression de chaque compétence */
+.bar {
+  width: 100%;
+  height: 10px;
+  background: rgba(142, 142, 142, 0.2);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+/* Styles pour l'élément de la barre de progression */
+.bar i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--red), #ff6d6d);
+}
+
+/* Styles pour les barres de progression spécifiques à chaque compétence */
+.skill-item:nth-child(2) .bar i {
+  background: linear-gradient(90deg, #1aa1ec, #60d7ff);
+}
+
+/* Styles pour les barres de progression spécifiques à chaque compétence */
+.skill-item:nth-child(3) .bar i {
+  background: linear-gradient(90deg, #f2d15c, #f7b23c);
+}
+
+/* Styles pour les barres de progression spécifiques à chaque compétence */
+.skill-item:nth-child(4) .bar i {
+  background: linear-gradient(90deg, #50b97d, #7fe0a0);
+}
+
+/* Styles pour les barres de progression spécifiques à chaque compétence */
+.skill-item:nth-child(5) .bar i {
+  background: linear-gradient(90deg, #1f8ad6, #73d4ff);
+}
+
+/* Styles pour le pied de page du site */
+.site-footer {
+  background: var(--footer-bg);
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 42px;
+  padding-top: 18px;
+}
+
+/* Styles pour l'intérieur du pied de page */
+.footer-inner {
+  max-width: 1185px;
+  margin: 0 auto;
+  padding: 26px 12px 12px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1fr 1fr;
+  gap: 24px;
+}
+
+/* Styles pour chaque bloc du pied de page */
+.footer-block h5 {
+  margin: 0 0 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Styles pour les paragraphes, les éléments de liste et les liens dans chaque bloc du pied de page */
+.footer-block p,
+.footer-block li,
+.footer-block a {
+  color: rgba(224, 232, 244, 0.9);
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+/* Styles pour les paragraphes dans le bloc de marque du pied de page */
+.brand-block p {
+  margin: 0;
+}
+
+/* Styles pour les listes dans chaque bloc du pied de page */
+.footer-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styles pour chaque élément de liste dans chaque bloc du pied de page */
+.footer-block li {
+  margin-bottom: 6px;
+}
+
+/* Styles pour les liens dans chaque bloc du pied de page */
+.footer-block a {
+  position: relative;
+  display: inline-block;
+  transition: opacity 0.2s ease;
+}
+
+.footer-block a::before {
+  content: "›";
+  margin-right: 0.45rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Styles pour les liens dans chaque bloc du pied de page au survol */
+.footer-block a:hover {
+  opacity: 0.92;
+}
+
+/* Styles pour la section des réseaux sociaux dans le pied de page */
+.socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+/* Styles pour chaque lien dans la section des réseaux sociaux */
+.socials a {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Styles pour chaque lien dans la section des réseaux sociaux au survol */
+.socials a::before {
+  display: none;
+}
+
+/* Styles pour la section de copyright dans le pied de page */
+.copyright {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.96rem;
+  padding: 18px 12px 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Styles pour les écrans de largeur maximale de 980px */
+@media (max-width: 980px) {
+  .main-nav {
+    gap: 0.8rem;
+    font-size: 0.68rem;
+  }
+
+  .about-card {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Styles pour les écrans de largeur maximale de 700px */
+@media (max-width: 700px) {
+  .header-inner {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: 16px 8px;
+    gap: 10px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem 1rem;
+  }
+
+  .hero {
+    min-height: 440px;
+  }
+
+  .hero-inner {
+    min-height: 440px;
+    padding-bottom: 28px;
+  }
+
+  .hero-copy h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-copy h2 {
+    font-size: 1.6rem;
+  }
+
+  .device-left {
+    width: 340px;
+    height: 170px;
+    left: 51%;
+  }
+
+  .device-right {
+    width: 180px;
+    height: 120px;
+    right: 30px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Définit le fond clair et la couleur du texte sur la page des réalisations. */
+.portfolio-page {
+  background: #f8f9fa;
+  color: #252a30;
+}
+
+/* Réduit la hauteur de l'en-tête sur la page des réalisations. */
+.portfolio-page .site-header {
+  background: #212529;
+}
+
+/* Ajuste l'alignement du logo et du menu dans l'en-tête du portfolio. */
+.portfolio-page .header-inner {
+  height: 44px;
+}
+
+/* Met en évidence la page actuellement sélectionnée dans la navigation. */
+.portfolio-page .main-nav a[aria-current="page"] {
+  color: #fff;
+}
+
+/* Crée le bandeau bleu décoratif en haut de la page du portfolio. */
+.portfolio-banner {
+  height: 96px;
+  background:
+    radial-gradient(
+      ellipse at 72% 50%,
+      rgba(0, 219, 255, 0.85),
+      transparent 24%
+    ),
+    linear-gradient(
+      167deg,
+      transparent 46%,
+      rgba(16, 164, 255, 0.95) 47%,
+      rgba(34, 106, 255, 0.3) 49%,
+      transparent 53%
+    ),
+    linear-gradient(
+      175deg,
+      transparent 41%,
+      rgba(48, 140, 255, 0.9) 42%,
+      rgba(15, 72, 197, 0.45) 44%,
+      transparent 49%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(42, 118, 255, 0.12) 0 1px,
+      transparent 1px 6px
+    ),
+    linear-gradient(110deg, #04163c, #073778 54%, #06183d);
+  overflow: hidden;
+}
+
+/* Centre le titre et les cartes dans la largeur disponible. */
+.portfolio-main {
+  width: min(100% - 88px, 1140px);
+  margin: 0 auto;
+  padding: 26px 0 34px;
+}
+
+/* Présente le titre et la phrase d'introduction au-dessus des réalisations. */
+.portfolio-heading {
+  margin: 0 0 34px;
+  text-align: center;
+}
+
+/* Met en forme le titre principal du portfolio. */
+.portfolio-heading h1 {
+  margin: 0;
+  color: #252a30;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Affiche la courte description sous le titre du portfolio. */
+.portfolio-heading p {
+  margin: 6px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Souligne le titre avec le trait bleu visible sur la maquette. */
+.heading-rule {
+  display: block;
+  width: 170px;
+  height: 3px;
+  margin: 11px auto 0;
+  background: #1879ed;
+}
+
+/* Dispose les cartes de projets sur trois colonnes sur grand écran. */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+/* Présente chaque réalisation sous forme de carte bordée. */
+.project-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #d8dadd;
+  border-radius: 5px;
+  background: #fff;
+}
+
+/* Uniformise la hauteur et le cadrage des images des projets. */
+.project-image {
+  width: 100%;
+  height: 145px;
+  object-fit: cover;
+}
+
+/* Centre le titre, la description et le lien d'action dans la carte. */
+.project-body {
+  display: flex;
+  min-height: 109px;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 12px 10px;
+  text-align: center;
+}
+
+/* Met en forme le nom de chaque réalisation. */
+.project-body h2 {
+  margin: 0 0 5px;
+  color: #252a30;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* Affiche une description concise de chaque projet. */
+.project-body p {
+  margin: 0 0 8px;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* Style du lien Voir, qui mène au contact pour obtenir des détails du projet. */
+.project-button {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  padding: 3px 10px;
+  border: 1px solid #337ab7;
+  border-radius: 4px;
+  color: #1769aa;
+  font-size: 11px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Renforce le contraste du lien Voir lorsqu'il est survolé ou sélectionné. */
+.project-button:hover,
+.project-button:focus-visible {
+  background: #1769aa;
+  color: #fff;
+}
+
+/* Sépare la technologie utilisée du contenu principal de chaque carte. */
+.project-tech {
+  display: grid;
+  min-height: 25px;
+  place-items: center;
+  padding: 4px 8px;
+  border-top: 1px solid #e0e0e0;
+  background: #f6f6f6;
+  font-size: 10px;
+  text-align: center;
+}
+
+/* Adapte la couleur et l'espacement du pied de page au modèle de référence. */
+.portfolio-page .site-footer {
+  margin-top: 0;
+  padding-top: 14px;
+  background: #eee;
+  color: #252a30;
+}
+
+/* Conserve quatre colonnes compactes dans le pied de page du portfolio. */
+.portfolio-page .footer-inner {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 16px;
+  padding: 16px 12px 12px;
+}
+
+/* Assombrit les titres du pied de page sur le fond clair. */
+.portfolio-page .footer-block h5 {
+  color: #252a30;
+  font-size: 12px;
+}
+
+/* Ajuste la taille des liens et coordonnées du pied de page clair. */
+.portfolio-page .footer-block p,
+.portfolio-page .footer-block li,
+.portfolio-page .footer-block a {
+  color: #343a40;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* Réduit l'écart vertical des liens dans le pied de page. */
+.portfolio-page .footer-block li {
+  margin-bottom: 1px;
+}
+
+/* Colore les puces des liens pour les distinguer sur le fond gris clair. */
+.portfolio-page .footer-block a::before {
+  color: #1879ed;
+}
+
+/* Présente les icônes sociales en gris foncé comme sur la capture. */
+.portfolio-page .socials a {
+  width: 22px;
+  height: 22px;
+  background: #555;
+  color: #fff;
+}
+
+/* Donne au copyright une bande sombre pleine largeur. */
+.portfolio-page .copyright {
+  padding: 10px 12px;
+  border-top: 0;
+  background: #212529;
+  color: #fff;
+  font-size: 10px;
+}
+
+/* Affiche les projets sur deux colonnes sur les tablettes. */
+@media (max-width: 760px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Empile le menu dans l'en-tête du portfolio sur les écrans mobiles. */
+@media (max-width: 700px) {
+  .portfolio-page .header-inner {
+    height: auto;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 8px;
+  }
+}
+
+/* Empile les projets et le pied de page sur les petits écrans. */
+@media (max-width: 560px) {
+  .portfolio-main {
+    width: min(100% - 32px, 420px);
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-page .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Utilise une seule colonne dans le pied de page sur les écrans étroits. */
+@media (max-width: 360px) {
+  .portfolio-page .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dispose les articles en trois colonnes comme sur la maquette du blog. */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px 15px;
+}
+
+/* Aligne le contenu des cartes du blog et conserve une hauteur homogène. */
+.blog-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #d8dadd;
+  border-radius: 5px;
+  background: #fff;
+}
+
+/* Ajuste la hauteur des images d'articles à la grille du blog. */
+.blog-card .project-image {
+  height: 154px;
+}
+
+/* Présente le titre, l'extrait et le bouton de lecture de chaque article. */
+.blog-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 10px 10px;
+}
+
+/* Met en forme les titres des articles du blog. */
+.blog-card-body h2 {
+  margin: 0 0 6px;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* Affiche un extrait compact sous le titre de l'article. */
+.blog-card-body > p {
+  margin: 0 0 9px;
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+/* Transforme le résumé natif en bouton accessible pour ouvrir l'article. */
+.article-more {
+  margin-top: auto;
+}
+
+/* Présente le résumé de chaque article sous la forme d'un bouton bleu. */
+.article-more summary {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+  padding: 4px 9px;
+  border-radius: 4px;
+  background: #1674e8;
+  color: #fff;
+  cursor: pointer;
+  font-size: 10px;
+  list-style: none;
+}
+
+/* Retire le marqueur natif du résumé dans les navigateurs WebKit. */
+.article-more summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Affiche le texte complémentaire quand l'article est déplié. */
+.article-more > p {
+  margin: 9px 0 0;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+/* Donne aux pages de services un fond clair et une grande zone de contenu. */
+.services-main {
+  padding-bottom: 62px;
+}
+
+/* Aligne les trois prestations sur une même rangée. */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+/* Présente chaque prestation dans une carte blanche centrée. */
+.service-card {
+  display: flex;
+  min-height: 216px;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 18px 20px;
+  border: 1px solid #eceff1;
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(24, 38, 55, 0.04);
+  text-align: center;
+}
+
+/* Dessine les icônes bleues des services avec des tracés SVG. */
+.service-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 8px;
+  fill: none;
+  stroke: #1879ed;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  transition: stroke 0.2s ease;
+}
+
+/* Change la couleur de l'icône lorsque la carte de service est survolée. */
+.service-card:hover .service-icon {
+  stroke: #cde1f8;
+}
+
+/* Met en forme le nom de chaque prestation. */
+.service-card h2 {
+  margin: 0 0 7px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Centre et compacte le descriptif de chaque prestation. */
+.service-card p {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+/* Centre l'appel à l'action sous les cartes de services. */
+.services-contact {
+  margin-top: 24px;
+  text-align: center;
+}
+
+/* Applique un fond illustré bleu à la page de contact. */
+.contact-page {
+  background: #1768c5;
+}
+
+/* Habille la zone du formulaire avec une image bleue en arrière-plan. */
+.contact-main {
+  padding: 10px max(24px, calc((100% - 1140px) / 2)) 42px;
+  background:
+    linear-gradient(rgba(13, 93, 184, 0.5), rgba(13, 93, 184, 0.5)),
+    url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1800&q=85")
+      center/cover no-repeat;
+}
+
+/* Crée le panneau blanc contenant le formulaire et les coordonnées. */
+.contact-card {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 28px 30px 32px;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(0, 27, 71, 0.16);
+}
+
+/* Centre le titre et la consigne du formulaire de contact. */
+.contact-heading {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Définit la taille du titre principal de la page de contact. */
+.contact-heading h1 {
+  margin: 0;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+/* Ajuste la taille et l'interligne de la consigne de contact. */
+.contact-heading p {
+  margin: 7px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Organise le formulaire et les coordonnées en deux colonnes. */
+.contact-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Souligne les titres du formulaire et des coordonnées. */
+.contact-form-section h2,
+.contact-details h2 {
+  margin: 0 0 14px;
+  padding-bottom: 7px;
+  border-bottom: 2px solid #1879ed;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+/* Aligne les champs de formulaire et l'action d'envoi. */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+/* Style commun aux champs texte et à la zone de message. */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d4d7da;
+  border-radius: 5px;
+  background: #fff;
+  color: #252a30;
+  font: inherit;
+  font-size: 10px;
+}
+
+/* Fixe la hauteur des champs de saisie sur une ligne. */
+.contact-form input {
+  min-height: 32px;
+}
+
+/* Autorise l'agrandissement vertical de la zone de message. */
+.contact-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* Met en évidence le champ actif pour faciliter la saisie. */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #69a7f5;
+  outline: 2px solid rgba(24, 121, 237, 0.15);
+}
+
+/* Rend le bouton d'envoi visible et centré sous les champs. */
+.contact-submit {
+  align-self: center;
+  margin-top: 1px;
+  padding: 8px 15px;
+  border: 0;
+  border-radius: 5px;
+  background: #1674e8;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+}
+
+/* Assombrit le bouton d'envoi au survol ou à la sélection clavier. */
+.contact-submit:hover,
+.contact-submit:focus-visible {
+  background: #0c5fc7;
+}
+
+/* Explique que le formulaire utilise le logiciel de messagerie de l'utilisateur. */
+.form-note {
+  margin: 8px 0 0;
+  color: #626b75;
+  font-size: 10px;
+  text-align: center;
+}
+
+/* Positionne les coordonnées et la carte dans la colonne de contact. */
+.contact-details address {
+  margin: 0 0 10px;
+  font-size: 10px;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+/* Resserre l'espacement entre les lignes d'adresse. */
+.contact-details address p {
+  margin: 0 0 2px;
+}
+
+/* Colore les liens de contact et les références légales. */
+.contact-details address a,
+.legal-content a {
+  color: #1674e8;
+}
+
+/* Affiche la carte en pleine largeur avec une hauteur adaptée au formulaire. */
+.contact-map {
+  display: block;
+  width: 100%;
+  height: 180px;
+  border: 0;
+}
+
+/* Masque visuellement les libellés tout en les laissant accessibles aux lecteurs d'écran. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Centre le titre de la page légale et sa ligne bleue décorative. */
+.legal-main {
+  width: min(100% - 64px, 1140px);
+  margin: 0 auto;
+  padding: 28px 0 20px;
+}
+
+/* Espace et centre le titre des mentions légales. */
+.legal-heading {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Définit la taille du titre des mentions légales. */
+.legal-heading h1 {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Ajuste la largeur du trait bleu sous le titre légal. */
+.legal-heading .heading-rule {
+  width: 235px;
+  margin-top: 9px;
+}
+
+/* Présente les informations légales sous forme d'accordéon natif. */
+.legal-accordion {
+  overflow: hidden;
+  border: 1px solid #d9dde1;
+  border-radius: 5px;
+  background: #fff;
+}
+
+/* Sépare visuellement les rubriques de l'accordéon légal. */
+.legal-item + .legal-item {
+  border-top: 1px solid #d9dde1;
+}
+
+/* Rend les rubriques de l'accordéon faciles à repérer et à activer. */
+.legal-item summary {
+  position: relative;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 13px;
+  list-style: none;
+}
+
+/* Masque le marqueur natif du résumé dans les navigateurs WebKit. */
+.legal-item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Ajoute une flèche qui indique l'état ouvert ou fermé de la rubrique. */
+.legal-item summary::after {
+  content: "⌄";
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  color: #333;
+  font-size: 20px;
+}
+
+/* Met en évidence l'en-tête de la rubrique légale ouverte. */
+.legal-item[open] summary {
+  background: #e8f1ff;
+  color: #1769aa;
+}
+
+/* Oriente la flèche vers le haut quand la rubrique est dépliée. */
+.legal-item[open] summary::after {
+  content: "⌃";
+  color: #1769aa;
+}
+
+/* Affiche les coordonnées ou crédits de la rubrique légale ouverte. */
+.legal-content {
+  min-height: 80px;
+  padding: 12px 16px 18px;
+  border-top: 1px solid #e3e5e8;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* Met en valeur le nom de l'éditeur ou de l'organisme dans l'accordéon. */
+.legal-content h2 {
+  margin: 0 0 7px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Espacement régulier entre les lignes d'information légale. */
+.legal-content p {
+  margin: 0 0 5px;
+}
+
+/* Réorganise les grilles sur les tablettes et petits écrans. */
+@media (max-width: 760px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-main {
+    padding: 16px 20px 32px;
+  }
+
+  .contact-card {
+    padding: 24px 20px;
+  }
+
+  .contact-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    min-height: auto;
+  }
+}
+
+/* Empile les contenus et réduit les marges sur les téléphones. */
+@media (max-width: 560px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-card .project-image {
+    height: 190px;
+  }
+
+  .contact-main {
+    padding: 12px 12px 24px;
+  }
+
+  .contact-card {
+    padding: 22px 16px;
+  }
+
+  .contact-heading h1 {
+    font-size: 23px;
+  }
+
+  .legal-main {
+    width: min(100% - 32px, 460px);
+  }
+
+  .legal-heading h1 {
+    font-size: 30px;
+  }
+}
+
+/* Fixe le lien de retour en haut dans le coin inférieur droit de chaque page. */
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 4px;
+  background: #1674e8;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  transition: background-color 0.2s ease;
+}
+
+/* Éclaircit le fond du bouton de retour en haut au survol ou au clavier. */
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  background: #298eff;
+}
+
+/* Rapproche le bouton du bord sur les petits écrans. */
+@media (max-width: 560px) {
+  .back-to-top {
+    right: 12px;
+    bottom: 12px;
+  }
+}

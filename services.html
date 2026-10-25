@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Services en UX design, développement web et référencement proposés par John Doe." />
+    <title>Services | John Doe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body id="top" class="portfolio-page">
+    <div class="page-shell">
+      <!-- Navigation commune vers les pages du portfolio. -->
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand" href="index.html">JOHN DOE</a>
+          <nav class="main-nav" aria-label="Navigation principale">
+            <a href="index.html">Accueil</a>
+            <a href="services.html" aria-current="page">Services</a>
+            <a href="realisations.html">Réalisations</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Me contacter</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Bandeau graphique bleu commun aux pages intérieures. -->
+      <div class="portfolio-banner" aria-hidden="true"></div>
+
+      <!-- Présentation des trois domaines de service. -->
+      <main class="portfolio-main services-main">
+        <header class="portfolio-heading">
+          <h1>MON OFFRE DE SERVICES</h1>
+          <p>Voici les prestations sur lesquelles je peux intervenir.</p>
+          <span class="heading-rule" aria-hidden="true"></span>
+        </header>
+
+        <section class="service-grid" aria-label="Prestations proposées">
+          <!-- Service de conception d'expérience utilisateur. -->
+          <article class="service-card">
+            <svg class="service-icon" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M7 8h34v25H7zM19 40h10M24 33v7M4 8h40" />
+            </svg>
+            <h2>UX DESIGN</h2>
+            <p>L'UX Design est une méthode de conception centrée sur l'utilisateur. Son but est d'offrir une expérience de navigation optimale à l'internaute.</p>
+          </article>
+
+          <!-- Service de création et d'intégration de sites web. -->
+          <article class="service-card">
+            <svg class="service-icon" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M12 5h17l8 8v30H12zM29 5v9h8M19 23l-5 5 5 5M30 23l5 5-5 5M27 21l-5 14" />
+            </svg>
+            <h2>DÉVELOPPEMENT WEB</h2>
+            <p>Le développement de sites web repose sur l'utilisation des langages HTML, CSS, JavaScript et PHP.</p>
+          </article>
+
+          <!-- Service d'optimisation de visibilité dans les moteurs de recherche. -->
+          <article class="service-card">
+            <svg class="service-icon" viewBox="0 0 48 48" aria-hidden="true">
+              <circle cx="21" cy="20" r="13" />
+              <path d="m31 30 11 11M17 23l4-8 4 8M18.5 20h5" />
+            </svg>
+            <h2>RÉFÉRENCEMENT</h2>
+            <p>Le référencement naturel d'un site, aussi appelé SEO, consiste à mettre des techniques en œuvre pour améliorer sa position dans les résultats des moteurs de recherche.</p>
+          </article>
+        </section>
+
+        <!-- Bouton vers la page de contact pour demander un accompagnement. -->
+        <div class="services-contact">
+          <a class="project-button" href="contact.html">Parlons de votre projet</a>
+        </div>
+      </main>
+
+      <!-- Pied de page avec accès aux autres pages et aux coordonnées. -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-block brand-block">
+            <h5>John Doe</h5>
+            <p>40 Rue Laure Diebold</p>
+            <p>69009 Lyon, France</p>
+            <p>Téléphone : <a href="tel:+33620304050">06 20 30 40 50</a></p>
+            <div class="socials" aria-label="Réseaux sociaux">
+              <a href="https://github.com/" aria-label="GitHub">gh</a>
+              <a href="https://x.com/" aria-label="X">x</a>
+              <a href="https://linkedin.com/" aria-label="LinkedIn">in</a>
+            </div>
+          </div>
+          <div class="footer-block">
+            <h5>Liens utiles</h5>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="index.html#about">À propos</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Me contacter</a></li>
+              <li><a href="mentions-legales.html">Mentions légales</a></li>
+            </ul>
+          </div>
+          <div class="footer-block">
+            <h5>Mes dernières réalisations</h5>
+            <ul>
+              <li><a href="realisations.html#fresh-food">Fresh food</a></li>
+              <li><a href="realisations.html#restaurant-akira">Restaurant Akira</a></li>
+              <li><a href="realisations.html#espace-bien-etre">Espace bien-être</a></li>
+            </ul>
+          </div>
+          <div class="footer-block">
+            <h5>Mes derniers articles</h5>
+            <ul>
+              <li><a href="blog.html#coder-html-css">Coder son site en HTML/CSS</a></li>
+              <li><a href="blog.html#vendre-en-ligne">Vendre ses produits sur le web</a></li>
+              <li><a href="blog.html#referencement">Se positionner sur Google</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">© Designed by John Doe</div>
+      </footer>
+    </div>
+    <!-- Lien fixe permettant de revenir rapidement au début de la page. -->
+    <a class="back-to-top" href="#top" aria-label="Retour en haut">↑</a>
+  </body>
+</html>

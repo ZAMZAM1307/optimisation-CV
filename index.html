@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio de John Doe, développeur web full stack à Lyon." />
+    <title>John Doe | Développeur web full stack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body id="top">
+    <div class="page-shell">
+      <!-- Navigation principale reliant l'accueil, les compétences et les réalisations. -->
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand" href="index.html">JOHN DOE</a>
+          <nav class="main-nav" aria-label="Navigation principale">
+            <a href="index.html" aria-current="page">Accueil</a>
+            <a href="services.html">Services</a>
+            <a href="realisations.html">Réalisations</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Me contacter</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Présentation principale avec appel à l'action vers la section À propos. -->
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <h1>Bonjour, je suis John Doe</h1>
+            <h2>Développeur web full stack</h2>
+            <a class="cta" href="#about">En savoir plus</a>
+          </div>
+        </div>
+        <div class="device device-left" aria-hidden="true"></div>
+        <div class="device device-right" aria-hidden="true"></div>
+      </section>
+
+      <!-- Présentation personnelle et compétences professionnelles. -->
+      <main class="content">
+        <section class="about-card" id="about">
+          <div class="about-copy">
+            <h3>À propos</h3>
+            <p>
+              Passionné par l'informatique et les nouvelles technologies, j'ai suivi
+              une formation d'intégrateur-développeur web au CEF. Au cours de cette
+              formation, j'ai pu acquérir des bases solides pour travailler dans le
+              domaine du développement web.
+            </p>
+            <p>
+              Basé à Lyon, je suis en recherche d'une alternance au sein d'une agence
+              digitale pour consolider ma formation de développeur web full stack.
+              J'accorde une attention particulière à la qualité du code que j'écris et
+              je respecte les bonnes pratiques du web.
+            </p>
+          </div>
+
+          <!-- Barres de progression des principales compétences techniques. -->
+          <div class="skills-panel" id="services">
+            <div class="portrait" role="img" aria-label="Portrait de John Doe"></div>
+            <h4>Mes compétences</h4>
+            <ul class="skills">
+              <li class="skill-item">
+                <div class="skill-label"><span>HTML5</span><span>90%</span></div>
+                <div class="bar"><i style="width: 90%"></i></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-label"><span>CSS3</span><span>80%</span></div>
+                <div class="bar"><i style="width: 80%"></i></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-label"><span>JAVASCRIPT</span><span>70%</span></div>
+                <div class="bar"><i style="width: 70%"></i></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-label"><span>PHP</span><span>60%</span></div>
+                <div class="bar"><i style="width: 60%"></i></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-label"><span>REACT</span><span>50%</span></div>
+                <div class="bar"><i style="width: 50%"></i></div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <!-- Pied de page contenant les coordonnées et les liens vers les autres sections. -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-block brand-block" id="contact">
+            <h5>John Doe</h5>
+            <p>40 Rue Laure Diebold</p>
+            <p>69009 Lyon, France</p>
+            <p>Téléphone : <a href="tel:+33620304050">06 20 30 40 50</a></p>
+            <div class="socials" aria-label="Réseaux sociaux">
+              <a href="https://github.com/" aria-label="GitHub">gh</a>
+              <a href="https://x.com/" aria-label="X">x</a>
+              <a href="https://linkedin.com/" aria-label="LinkedIn">in</a>
+            </div>
+          </div>
+
+          <div class="footer-block">
+            <h5>Liens utiles</h5>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="index.html#about">À propos</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Me contacter</a></li>
+              <li><a href="mentions-legales.html">Mentions légales</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-block">
+            <h5>Mes dernières réalisations</h5>
+            <ul>
+              <li><a href="realisations.html#fresh-food">Fresh food</a></li>
+              <li><a href="realisations.html#restaurant-akira">Restaurant Akira</a></li>
+              <li><a href="realisations.html#espace-bien-etre">Espace bien-être</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-block" id="articles">
+            <h5>Mes derniers articles</h5>
+            <ul>
+              <li><a href="blog.html#coder-html-css">Coder son site en HTML/CSS</a></li>
+              <li><a href="blog.html#vendre-en-ligne">Vendre ses produits sur le web</a></li>
+              <li><a href="blog.html#referencement">Se positionner sur Google</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">© Designed by John Doe</div>
+      </footer>
+    </div>
+    <!-- Lien fixe permettant de revenir rapidement au début de la page. -->
+    <a class="back-to-top" href="#top" aria-label="Retour en haut">↑</a>
+  </body>
+</html>

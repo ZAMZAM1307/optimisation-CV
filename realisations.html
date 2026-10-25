@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Découvrez les réalisations web de John Doe." />
+    <title>Réalisations | John Doe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body id="top" class="portfolio-page">
+    <div class="page-shell">
+      <!-- Navigation partagée avec des liens vers l'accueil et les sections existantes. -->
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand" href="index.html">JOHN DOE</a>
+          <nav class="main-nav" aria-label="Navigation principale">
+            <a href="index.html">Accueil</a>
+            <a href="services.html">Services</a>
+            <a href="realisations.html" aria-current="page">Réalisations</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Me contacter</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Bandeau décoratif bleu inspiré de l'image de référence. -->
+      <div class="portfolio-banner" aria-hidden="true"></div>
+
+      <!-- Présentation et grille des trois projets du portfolio. -->
+      <main class="portfolio-main" id="portfolio">
+        <header class="portfolio-heading">
+          <h1>PORTFOLIO</h1>
+          <p>Voici quelques-unes de mes réalisations.</p>
+          <span class="heading-rule" aria-hidden="true"></span>
+        </header>
+
+        <section class="project-grid" aria-label="Réalisations web">
+          <!-- Carte du projet Fresh food. -->
+          <article class="project-card" id="fresh-food">
+            <img
+              class="project-image"
+              src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=85"
+              alt="Salade fraîche composée de légumes colorés"
+            />
+            <div class="project-body">
+              <h2>Fresh food</h2>
+              <p>Réalisation d'un site avec commande en ligne.</p>
+              <a class="project-button" href="contact.html" aria-label="Contacter John Doe au sujet du projet Fresh food">Voir</a>
+            </div>
+            <div class="project-tech">Site réalisé avec PHP et MySQL</div>
+          </article>
+
+          <!-- Carte du projet Restaurant Akira. -->
+          <article class="project-card" id="restaurant-akira">
+            <img
+              class="project-image"
+              src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=900&q=85"
+              alt="Assortiment de sushis et de makis"
+            />
+            <div class="project-body">
+              <h2>Restaurant Akira</h2>
+              <p>Réalisation d'un site vitrine.</p>
+              <a class="project-button" href="contact.html" aria-label="Contacter John Doe au sujet du projet Restaurant Akira">Voir</a>
+            </div>
+            <div class="project-tech">Site réalisé avec WordPress</div>
+          </article>
+
+          <!-- Carte du projet Espace bien-être. -->
+          <article class="project-card" id="espace-bien-etre">
+            <img
+              class="project-image"
+              src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=85"
+              alt="Espace de détente avec pierres et bougie"
+            />
+            <div class="project-body">
+              <h2>Espace bien-être</h2>
+              <p>Réalisation d'un site vitrine pour un praticien de bien-être.</p>
+              <a class="project-button" href="contact.html" aria-label="Contacter John Doe au sujet du projet Espace bien-être">Voir</a>
+            </div>
+            <div class="project-tech">Site réalisé en HTML/CSS</div>
+          </article>
+        </section>
+      </main>
+
+      <!-- Pied de page reprenant les liens du site pour faciliter la navigation. -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-block brand-block" id="contact">
+            <h5>John Doe</h5>
+            <p>40 Rue Laure Diebold</p>
+            <p>69009 Lyon, France</p>
+            <p>Téléphone : <a href="tel:+33620304050">06 20 30 40 50</a></p>
+            <div class="socials" aria-label="Réseaux sociaux">
+              <a href="https://github.com/" aria-label="GitHub">gh</a>
+              <a href="https://x.com/" aria-label="X">x</a>
+              <a href="https://linkedin.com/" aria-label="LinkedIn">in</a>
+            </div>
+          </div>
+
+          <div class="footer-block">
+            <h5>Liens utiles</h5>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="index.html#about">À propos</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Me contacter</a></li>
+              <li><a href="mentions-legales.html">Mentions légales</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-block">
+            <h5>Mes dernières réalisations</h5>
+            <ul>
+              <li><a href="#fresh-food">Fresh food</a></li>
+              <li><a href="#restaurant-akira">Restaurant Akira</a></li>
+              <li><a href="#espace-bien-etre">Espace bien-être</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-block" id="articles">
+            <h5>Mes derniers articles</h5>
+            <ul>
+              <li><a href="blog.html#coder-html-css">Coder son site en HTML/CSS</a></li>
+              <li><a href="blog.html#vendre-en-ligne">Vendre ses produits sur le web</a></li>
+              <li><a href="blog.html#referencement">Se positionner sur Google</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">© Designed by John Doe</div>
+      </footer>
+    </div>
+    <!-- Lien fixe permettant de revenir rapidement au début de la page. -->
+    <a class="back-to-top" href="#top" aria-label="Retour en haut">↑</a>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contactez John Doe pour discuter de votre projet web." />
+    <title>Me contacter | John Doe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body id="top" class="portfolio-page contact-page">
+    <div class="page-shell">
+      <!-- Navigation commune vers les pages du portfolio. -->
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand" href="index.html">JOHN DOE</a>
+          <nav class="main-nav" aria-label="Navigation principale">
+            <a href="index.html">Accueil</a>
+            <a href="services.html">Services</a>
+            <a href="realisations.html">Réalisations</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html" aria-current="page">Me contacter</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Formulaire et coordonnées présentés sur un fond illustré. -->
+      <main class="contact-main">
+        <section class="contact-card">
+          <header class="contact-heading">
+            <h1>ME CONTACTER</h1>
+            <p>Pour me contacter en vue d'un entretien ou d'une future collaboration, merci de remplir le formulaire de contact.</p>
+            <span class="heading-rule" aria-hidden="true"></span>
+          </header>
+
+          <div class="contact-columns">
+            <!-- Formulaire avec validation native et envoi via le logiciel de messagerie. -->
+            <section class="contact-form-section">
+              <h2>Formulaire de contact</h2>
+              <form class="contact-form" action="mailto:john.doe@gmail.com" method="post" enctype="text/plain">
+                <label class="visually-hidden" for="contact-name">Votre nom</label>
+                <input id="contact-name" name="nom" type="text" placeholder="Votre nom" autocomplete="name" required />
+
+                <label class="visually-hidden" for="contact-email">Votre adresse e-mail</label>
+                <input id="contact-email" name="email" type="email" placeholder="Votre adresse email" autocomplete="email" required />
+
+                <label class="visually-hidden" for="contact-phone">Votre numéro de téléphone</label>
+                <input id="contact-phone" name="telephone" type="tel" placeholder="Votre numéro de téléphone" autocomplete="tel" />
+
+                <label class="visually-hidden" for="contact-subject">Sujet</label>
+                <input id="contact-subject" name="sujet" type="text" placeholder="Sujet" required />
+
+                <label class="visually-hidden" for="contact-message">Votre message</label>
+                <textarea id="contact-message" name="message" placeholder="Votre message" rows="6" required></textarea>
+
+                <button class="contact-submit" type="submit">Envoyer</button>
+              </form>
+              <p class="form-note">L'envoi ouvre votre logiciel de messagerie.</p>
+            </section>
+
+            <!-- Coordonnées directes et carte de localisation de Lyon. -->
+            <section class="contact-details">
+              <h2>Mes coordonnées</h2>
+              <address>
+                <p><span aria-hidden="true">⌖</span> 40 Rue Laure Diebold, 69009 Lyon, France</p>
+                <p><span aria-hidden="true">▯</span> <a href="tel:+33620304050">06 20 30 40 50</a></p>
+                <p><span aria-hidden="true">✉</span> <a href="mailto:john.doe@gmail.com">john.doe@gmail.com</a></p>
+              </address>
+              <iframe
+                class="contact-map"
+                title="Carte de localisation de John Doe, 40 Rue Laure Diebold à Lyon"
+                src="https://maps.google.com/maps?q=40%20Rue%20Laure%20Diebold%2C%2069009%20Lyon&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <!-- Pied de page avec liens vers l'accueil, les services et les contenus. -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-block brand-block">
+            <h5>John Doe</h5>
+            <p>40 Rue Laure Diebold</p>
+            <p>69009 Lyon, France</p>
+            <p>Téléphone : <a href="tel:+33620304050">06 20 30 40 50</a></p>
+            <div class="socials" aria-label="Réseaux sociaux">
+              <a href="https://github.com/" aria-label="GitHub">gh</a>
+              <a href="https://x.com/" aria-label="X">x</a>
+              <a href="https://linkedin.com/" aria-label="LinkedIn">in</a>
+            </div>
+          </div>
+          <div class="footer-block">
+            <h5>Liens utiles</h5>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="index.html#about">À propos</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Me contacter</a></li>
+              <li><a href="mentions-legales.html">Mentions légales</a></li>
+            </ul>
+          </div>
+          <div class="footer-block">
+            <h5>Mes dernières réalisations</h5>
+            <ul>
+              <li><a href="realisations.html#fresh-food">Fresh food</a></li>
+              <li><a href="realisations.html#restaurant-akira">Restaurant Akira</a></li>
+              <li><a href="realisations.html#espace-bien-etre">Espace bien-être</a></li>
+            </ul>
+          </div>
+          <div class="footer-block">
+            <h5>Mes derniers articles</h5>
+            <ul>
+              <li><a href="blog.html#coder-html-css">Coder son site en HTML/CSS</a></li>
+              <li><a href="blog.html#vendre-en-ligne">Vendre ses produits sur le web</a></li>
+              <li><a href="blog.html#referencement">Se positionner sur Google</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">© Designed by John Doe</div>
+      </footer>
+    </div>
+    <!-- Lien fixe permettant de revenir rapidement au début de la page. -->
+    <a class="back-to-top" href="#top" aria-label="Retour en haut">↑</a>
+  </body>
+</html>
